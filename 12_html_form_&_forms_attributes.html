@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Form & Attributes Notes</title>
+
+  <!--
+  ================================================================================
+  File: html_form_attributes.html
+  Purpose: Demonstrates a simple HTML form and important attributes.
+  Topics:
+  - <form>: action, method attributes
+  - Input types: text, number, email, password
+  - Required fields, placeholders
+  - Buttons: submit, reset
+  - Basic responsive styling
+  ================================================================================
+  -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      color: #555;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      margin: 8px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus {
+      border-color: #4682b4;
+      box-shadow: 0 0 5px rgba(70, 130, 180, 0.5);
+      outline: none;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #4682b4;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #315f7d;
+    }
+
+    button[type="reset"] {
+      background-color: #999;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      body {
+        padding: 20px;
+      }
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Form: collects user info -->
+  <form action="https://www.example.com" method="get">
+    <h1>Submit Your Info</h1>
+
+    <!-- Text input for first name -->
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" required />
+
+    <!-- Text input for last name -->
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" required />
+
+    <!-- Number input for age -->
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" required min="0" max="120" />
+
+    <!-- Email input ensures valid email format -->
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required placeholder="example@domain.com" />
+
+    <!-- Password input hides text -->
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="at least 8 characters" required />
+
+    <!-- Buttons -->
+    <button type="submit">Submit</button> <!-- sends data to action URL -->
+    <button type="reset">Clear</button>   <!-- clears all input fields -->
+  </form>
+
+  <!-- Notes:
+    1. 'action' attribute: URL where form data is sent.
+    2. 'method' attribute: GET sends data via URL, POST sends securely.
+    3. 'required' ensures user cannot submit empty fields.
+    4. 'placeholder' shows sample text inside input.
+    5. 'min' and 'max' limit numeric input values.
+    6. Password input hides characters for security.
+  -->
+
+</body>
+</html>

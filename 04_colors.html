@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Colors Notes</title>
+
+  <!--
+  ================================================================================
+  File: color.html
+  Purpose: Demonstrates HTML text and background colors using inline, internal, 
+           and external CSS.
+  Topics:
+  - Inline CSS: style attribute in individual elements
+  - Internal CSS: <style> tag in head
+  - External CSS: link to style.css
+  - Named colors, hex colors, RGB, RGBA, HSL
+  ================================================================================
+  -->
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      background-color: #4d88ff; /* body background using hex color */
+      color: azure; /* default text color */
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .highlight {
+      background-color: #ffeb3b; /* yellow highlight */
+      color: black;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .gradient-box {
+      background: linear-gradient(to right, #ff7f50, #ff1493);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 style="text-align:center; color: white;">HTML Color Examples</h1>
+
+<h2>1. Inline CSS</h2>
+<p style="color: red;">This text is red using inline style.</p>
+<p style="background-color: yellow; color: black;">Yellow background with black text.</p>
+
+<h2>2. Internal CSS Classes</h2>
+<p class="highlight">This text uses the internal CSS class "highlight".</p>
+<div class="gradient-box">This div uses a gradient background with internal CSS.</div>
+
+<h2>3. Named, Hex, RGB, and RGBA Colors</h2>
+<ul>
+  <li style="color: green;">Green (named color)</li>
+  <li style="color: #ff6347;">Tomato (hex color)</li>
+  <li style="color: rgb(255, 99, 71);">Tomato (RGB color)</li>
+  <li style="color: rgba(255, 99, 71, 0.5);">Tomato (RGBA, 50% opacity)</li>
+  <li style="color: hsl(9, 100%, 64%);">Tomato (HSL color)</li>
+</ul>
+
+<h2>4. Background Colors</h2>
+<p style="background-color: lightblue;">Light blue background</p>
+<p style="background-color: #ffcccb;">Hex color background</p>
+
+<h2>5. Combining text and background colors</h2>
+<p style="color: white; background-color: #ff5733; padding: 5px;">White text on orange-red background</p>
+
+<h2>6. Using external CSS</h2>
+<p class="external-style">This paragraph can be styled from style.css file.</p>
+
+<!-- Footer note -->
+<footer>
+  <p>Experiment with different colors using inline, internal, or external CSS!</p>
+</footer>
+
+</body>
+</html>

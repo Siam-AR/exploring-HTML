@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Media Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1, h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .media-section {
+      display: block;       /* Make each section a block */
+      width: 100%;          /* Full width */
+      margin-bottom: 40px;  /* Space between sections */
+    }
+
+    .media-section video,
+    .media-section audio,
+    .media-section img {
+      display: block;       /* Force each media element to be block */
+      width: 100%;          /* Full container width */
+      max-width: 600px;     /* Optional: limit max width */
+      margin: 10px 0;       /* Vertical spacing */
+    }
+
+    .info {
+      display: block;
+      color: #555;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>HTML Media Elements</h1>
+
+<!-- Video Example -->
+<div class="media-section">
+  <h2>1. Video Element</h2>
+  <video controls muted autoplay loop poster="./Images/videoPoster.png">
+    <source src="./Videos/HTML series over, what next.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <span class="info">Attributes used: controls, muted, autoplay, loop, poster</span>
+</div>
+
+<!-- Audio Example -->
+<div class="media-section">
+  <h2>2. Audio Element</h2>
+  <audio controls>
+    <source src="./Audio/sampleAudio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <span class="info">Attributes used: controls</span>
+</div>
+
+<!-- Image Example -->
+<div class="media-section">
+  <h2>3. Image Element</h2>
+  <img src="./Images/sampleImage.jpg" alt="Sample Image">
+  <span class="info">Attributes used: src, alt, width/height</span>
+</div>
+
+<!-- Notes -->
+<div class="media-section">
+  <h2>Notes:</h2>
+  <ul class="info">
+    <li>&lt;video&gt;, &lt;audio&gt;, &lt;img&gt; allow embedding media in HTML.</li>
+    <li>Use multiple &lt;source&gt; for browser compatibility.</li>
+    <li>Always provide fallback text or alt attributes.</li>
+    <li>Each section is stacked vertically: Title → Element → Info.</li>
+  </ul>
+</div>
+
+</body>
+</html>

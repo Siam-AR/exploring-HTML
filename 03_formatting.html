@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Text Formatting Notes</title>
+</head>
+<body>
+
+<!-- 
+================================================================================
+File: formatting.html
+Purpose: Demonstrates HTML text formatting tags and semantic emphasis.
+Topics covered:
+- Bold and strong text: <b> vs <strong>
+- Italic and emphasis: <i> vs <em>
+- Lists: <ul>, <li>
+- Subscript and superscript: <sub>, <sup>
+- Mark, deleted text: <mark>, <del>
+- Abbreviation: <abbr>
+- Blockquote and citation: <blockquote cite="">
+- Bidirectional override: <bdo>
+- Address block: <address>
+================================================================================
+-->
+
+<h1>Formatting Examples</h1>
+
+<!-- Bold vs Strong -->
+<h3>Bold vs Strong</h3>
+<p>This is <b>bold text (visual only)</b></p>
+<p>This is <strong>strong text (semantic emphasis)</strong></p>
+
+<!-- Italic vs Emphasis -->
+<h3>Italic vs Emphasis</h3>
+<p>This is <i>italic text (visual only)</i></p>
+<p>This is <em>emphasized text (semantic emphasis)</em></p>
+
+<!-- Lists -->
+<h3>Common Formatting Tags List</h3>
+<ul>
+  <li><b>b</b>, <strong>strong</strong></li>
+  <li><i>i</i>, <em>em</em></li>
+  <li><small>small</small></li>
+  <li><sub>sub</sub>, <sup>sup</sup></li>
+  <li><del>del</del>, <mark>mark</li>
+</ul>
+
+<!-- Subscript, Superscript, Mark, Del -->
+<p>Chemical formula: Water is <mark>H<sub>2</sub>O</mark></p>
+<p>Math example: 2<sup>2</sup> = <del>5</del> 4</p>
+
+<!-- Inline styling example -->
+<h3 style="text-align: center; background-color: #6fffff">
+  Inline Styling Example
+</h3>
+
+<!-- Blockquote -->
+<h3>Blockquote with Citation</h3>
+<blockquote cite="https://www.w3schools.com">
+  HTML is the standard markup language for Web pages.
+</blockquote>
+
+<!-- Abbreviation -->
+<p>
+  The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+</p>
+
+<!-- Normal text vs BDO -->
+<p>Normal text: Hello</p>
+<p><bdo dir="rtl">Hello (text direction RTL)</bdo></p>
+
+<!-- Address -->
+<h3>Address Example</h3>
+<address>
+  Written by Siam Al Rabbi.<br />
+  Visit us at: <a href="http://www.example.com" target="_blank" rel="noopener">www.example.com</a><br />
+  BUBT, Dhaka, Bangladesh
+</address>
+
+<!-- Bonus: Semantic small text -->
+<h3>Small Text Example</h3>
+<p>This is normal text, and this is <small>small text</small>.</p>
+
+</body>
+</html>

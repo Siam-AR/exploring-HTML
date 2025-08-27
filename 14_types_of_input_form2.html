@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Input Types Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: rgb(240, 248, 255);
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+    input, select, textarea {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      width: 100%;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+<form action="#" method="get">
+  <h1>HTML Input Types Notes</h1>
+
+  <!-- Text input -->
+  <label for="textIn">Text Input (4 to 8 characters)</label>
+  <input type="text" id="textIn" name="textIn" required minlength="4" maxlength="8">
+
+  <!-- Password -->
+  <label for="passwordIn">Password Input</label>
+  <input type="password" id="passwordIn" name="passwordIn" placeholder="Enter password" required>
+
+  <!-- Number -->
+  <label for="numberIn">Number Input (1 to 100)</label>
+  <input type="number" id="numberIn" name="numberIn" min="1" max="100" value="50">
+
+  <!-- Range -->
+  <label for="rangeIn">Range Input (0 to 100)</label>
+  <input type="range" id="rangeIn" name="rangeIn" min="0" max="100" value="50">
+
+  <!-- Color -->
+  <label for="colorIn">Color Picker</label>
+  <input type="color" id="colorIn" name="colorIn" value="#ff0000">
+
+  <!-- Email -->
+  <label for="emailIn">Email Input</label>
+  <input type="email" id="emailIn" name="emailIn" placeholder="example@domain.com" required>
+
+  <!-- Tel -->
+  <label for="telIn">Telephone Input</label>
+  <input type="tel" id="telIn" name="telIn" placeholder="+8801234567890">
+
+  <!-- URL -->
+  <label for="urlIn">Website URL Input</label>
+  <input type="url" id="urlIn" name="urlIn" placeholder="https://example.com">
+
+  <!-- Search -->
+  <label for="searchIn">Search Input</label>
+  <input type="search" id="searchIn" name="searchIn" placeholder="Search...">
+
+  <!-- Week, Month, Date, DateTime -->
+  <label for="weekIn">Week Input</label>
+  <input type="week" id="weekIn" name="weekIn">
+  <label for="monthIn">Month Input (min 2018-03)</label>
+  <input type="month" id="monthIn" name="monthIn" min="2018-03" value="2025-07">
+  <label for="dateIn">Date Input</label>
+  <input type="date" id="dateIn" name="dateIn" value="2025-07-26">
+  <label for="dateTimeLocalIn">DateTime Local Input</label>
+  <input type="datetime-local" id="dateTimeLocalIn" name="dateTimeLocalIn" value="2025-07-26T12:30">
+
+  <!-- Select dropdown -->
+  <label for="EditorIn">Select your Editor</label>
+  <select id="EditorIn" name="Editors"> 
+    <option value="VSCode">VSCode</option>
+    <option value="Intelij IDEA">Intelij IDEA</option>
+    <option value="Codeblocks">Codeblocks</option>
+  </select>
+
+  <!-- Checkbox and Radio -->
+  <label for="checkboxIn">Checkbox Input</label>
+  <input type="checkbox" id="checkboxIn" name="checkboxIn">
+  <label>Choose Your Gender:</label>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label>
+
+  <!-- File -->
+  <label for="profile">Choose a profile picture</label>
+  <input type="file" id="profile" name="profile">
+
+  <!-- Textarea -->
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="4" placeholder="Type your message here"></textarea>
+
+  <!-- Hidden input -->
+  <input type="hidden" name="hiddenValue" value="12345">
+
+  <!-- Submit and Reset -->
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+
+  <!-- Notes:
+    1. type="text", type="password", type="email", type="tel", type="url", type="search"
+    2. type="number" for numeric input, type="range" for sliders
+    3. type="color" for color picker
+    4. type="checkbox" and type="radio" for selections
+    5. <select> dropdown and <textarea> multi-line text
+    6. type="file" for uploads, type="hidden" for hidden data
+    7. minlength, maxlength, min, max, required ensure proper input
+  -->
+
+</form>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embedded Videos Table Notes</title>
+
+  <!--
+  ================================================================================
+  File: class_id_iframe.html
+  Purpose: Demonstrates embedding YouTube videos inside an HTML table using <iframe>.
+  Topics:
+  - HTML tables: <table>, <tr>, <th>, <td>
+  - Styling tables: borders, hover effects, alternating row colors
+  - Embedding videos using <iframe>
+  - Responsive iframe sizing with max-width and border-radius
+  ================================================================================
+  -->
+
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse; /* Merge table borders */
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      background-color: #fff;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4a90e2;
+      color: white;
+      font-size: 18px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9; /* Zebra striping for better readability */
+    }
+
+    tr:hover {
+      background-color: rgb(162, 219, 246);
+      transition: background-color 0.25s ease;
+    }
+
+    iframe {
+      max-width: 100%; /* Make iframe responsive */
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Embedded YouTube Videos Table</h2>
+
+<!-- Table with embedded iframes -->
+<table>
+  <tr>
+    <th>Video Title</th>
+    <th>Embedded Video</th>
+  </tr>
+
+  <tr>
+    <td>Accidental Off-Roading // Triumph Speed Twin [4K]</td>
+    <td>
+      <iframe width="360" height="215" 
+              src="https://www.youtube.com/embed/LOoFhHVDcp8?si=SibY_R_akfs1znKi" 
+              title="YouTube video player" frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+
+  <tr>
+    <td>HTML and VSCode - Getting Started | Hindi</td>
+    <td>
+      <iframe width="360" height="215" 
+              src="https://www.youtube.com/embed/XmLOwJHFHf0?si=nLzixvbXchSUaa2m" 
+              title="YouTube video player" frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+
+  <tr>
+    <td>JavaScript for Beginners | Chai aur #JavaScript</td>
+    <td>
+      <iframe width="360" height="215" 
+              src="https://www.youtube.com/embed/Hr5iLG7sUa0?si=FpOZEUifZsrYDTJT" 
+              title="YouTube video player" frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+<!-- Notes:
+- <iframe> allows embedding external content like YouTube videos.
+- Using max-width:100% makes videos responsive.
+- Tables can organize content neatly for multiple video embeds.
+- Hover effect on rows improves UX.
+-->
+
+</body>
+</html>

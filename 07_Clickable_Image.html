@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Objects with Google Search</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <h1> Click Any Object to Search on Google</h1>
+
+  <img src="./Images/workspace.jpg" usemap="#image-map" alt="Clickable Workspace">
+
+  <map id="image-map">
+    <area coords="1,133,48,102,136,275,345,279,365,399,2,398" shape="poly" data-item="Laptop">
+<area coords="207,227,197,223,189,215,186,204,186,193,190,184,196,182,204,184,207,175,216,170,224,167,234,167,242,167,252,167,262,171,266,180,267,238,261,246,251,251,237,253,224,253,215,248,209,241" shape="poly" data-item="Coffee Mug">
+
+
+    <area coords="392,326,413,290,560,327,551,373" shape="poly" data-item="Mobile" >
+    <area coords="348,229,359,251,312,226,304,219,301,205,306,200,318,198,332,193,378,177,383,204,473,250,404,280,380,264,371,246,362,226,350,216" shape="poly" data-item="Notepad">
+    <area coords="137,271,110,216,165,127,447,121,598,333,415,287,408,281,480,249,385,201,383,175,302,198,302,220,361,256,363,265,371,277,382,288,390,287,389,277,401,283,403,296,394,303,387,318,394,332,550,378,564,331,597,341,597,394,367,396,348,280,265,272,271,241,268,175,257,162,231,162,205,167,195,172,182,191,181,212,196,232,202,234,209,247,231,259,266,247,265,273" shape="poly" data-item="Table">
+    <area coords="107,212,49,94,0,129,1,1,221,1,227,122,161,125" shape="poly" data-item="window">
+    <area coords="225,5,593,5,595,322,449,119,230,121" shape="poly" data-item="Wall">
+    <area coords="383,281,371,275,366,263,359,249,351,230,351,221,358,228,365,241,375,264,381,271" shape="poly" data-item="Pen">
+  </map>
+
+  <!-- <script>
+
+    const handleClick = (item) => {
+      alert(`You clicked on ${item}`);
+      window.open(`https://www.google.com/search?q=${item}`, "_blank");
+    }
+  </script> -->
+
+  <script>
+  const handleClick = (item) => {
+    alert(`You clicked on ${item}`);
+    window.open(`https://www.google.com/search?q=${item}`, "_blank");
+  };
+
+  // Select all <area> elements
+  document.querySelectorAll('area[data-item]').forEach(area => {
+    area.addEventListener('click', function () {
+      const item = this.dataset.item;
+      handleClick(item);
+    });
+  });
+</script>
+
+
+</body>
+</html>

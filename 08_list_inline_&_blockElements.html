@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Lists & Inline/Block Elements Notes</title>
+
+  <!--
+  ================================================================================
+  File: list_inline_block.html
+  Purpose: Demonstrates HTML ordered & unordered lists, and difference between 
+           block and inline elements.
+  Topics:
+  - Unordered list (<ul>) with <li>
+  - Ordered list (<ol>) with different list-style-types
+  - Block elements: <div>, <p>, <h1>-<h6>
+  - Inline elements: <span>, <a>, <strong>, <em>
+  ================================================================================
+  -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    ul, ol {
+      margin-bottom: 20px;
+    }
+
+    .block-example {
+      background-color: lightblue;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .inline-example span,
+    .inline-example a {
+      background-color: lightgreen;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>HTML Lists & Inline/Block Elements</h1>
+
+<h2>1. Unordered List</h2>
+<ul>
+  <li>Siam</li>
+  <li>Uday</li>
+  <li>Antor</li>
+  <li>Afique</li>
+  <li>Takbir</li>
+</ul>
+<p>Note: <code>&lt;ul&gt;</code> creates a list with bullet points.</p>
+
+<h2>2. Ordered List</h2>
+<ol style="list-style-type: decimal;">
+  <li>Siam</li>
+  <li>Uday</li>
+  <li>Antor</li>
+  <li>Afique</li>
+  <li>Takbir</li>
+</ol>
+<p>Decimal numbering (1,2,3...)</p>
+
+<ol style="list-style-type: lower-roman;">
+  <li>Siam</li>
+  <li>Uday</li>
+  <li>Antor</li>
+  <li>Afique</li>
+  <li>Takbir</li>
+</ol>
+<p>Lowercase Roman numerals (i, ii, iii...)</p>
+
+<ol style="list-style-type: upper-alpha;">
+  <li>Siam</li>
+  <li>Uday</li>
+  <li>Antor</li>
+  <li>Afique</li>
+  <li>Takbir</li>
+</ol>
+<p>Uppercase letters (A, B, C...)</p>
+
+<h2>3. Block Elements</h2>
+<div class="block-example">
+  This is a <code>DIV</code> (block element)
+</div>
+<p class="block-example">
+  This is a <code>P</code> (paragraph, block element)
+</p>
+<p>Note: Block elements take the full width and start on a new line.</p>
+
+<h2>4. Inline Elements</h2>
+<p class="inline-example">
+  This is an inline <span>SPAN</span> inside a paragraph.  
+  Here's an inline <a href="#">LINK</a>.
+</p>
+<p>Note: Inline elements only take as much width as necessary and do not start a new line.</p>
+
+</body>
+</html>

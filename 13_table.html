@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Notes</title>
+
+    <!--
+    ================================================================================
+    File: table.html
+    Purpose: Demonstrates HTML table structure and attributes.
+    Topics:
+    - <table>: container for tabular data
+    - <thead>, <tbody>, <tfoot>: separate table sections
+    - <tr>: table row
+    - <th>: table header
+    - <td>: table data
+    - colspan, rowspan: merge cells horizontally or vertically
+    - Styling tables: borders, colors, alignment
+    ================================================================================
+    -->
+
+    <style>
+        table{
+            color: whitesmoke;
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            border: 1px solid whitesmoke;
+            padding: 10px;
+        }
+
+        tr{
+            background-color: #414141;
+        }
+
+        tr:nth-child(even){
+            background-color: black;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>HTML Table Examples</h1>
+
+<h2>1. Structured Table with thead, tbody, tfoot</h2>
+<table>
+  <!-- Table Header -->
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <!-- Table Body -->
+  <tbody>
+    <tr>
+      <td>Siam</td>
+      <td>22235103331</td>
+      <td>siam00965@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Uday</td>
+      <td>22235103320</td>
+      <td>udu@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Afique</td>
+      <td>22235103341</td>
+      <td>bodda@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Antor</td>
+      <td>22235103355</td>
+      <td>takla@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Takbir</td>
+      <td>22235103326</td>
+      <td>mora@gmail.com</td>
+    </tr>
+  </tbody>
+
+  <!-- Table Footer -->
+  <tfoot>
+    <tr>
+      <td colspan="3">Total Students: 5</td>
+    </tr>
+  </tfoot>
+</table>
+
+<br><hr><br>
+
+<h2>2. Simple Table Without Thead/Tbody/Tfoot</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <td>Siam</td>
+        <td>Uday</td>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <td>331</td>
+        <td>320</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>siam00965@gmail.com</td>
+        <td>mruyo23@gmail.com</td>
+    </tr>
+</table>
+
+<!-- Notes:
+1. Use <thead> for header, <tbody> for main content, <tfoot> for summary/footer.
+2. <th> is bold and centered by default.
+3. colspan="3" merges three cells horizontally.
+4. Use CSS to style table rows, alternating colors, borders, and alignment.
+-->
+
+</body>
+</html>
